@@ -7,15 +7,15 @@
 /* Custom Properties, update these for your own design */
 
 :root {
-  --ff-primary: "Source Sans Pro", sans-serif;
-  --ff-secondary: "Source Code Pro", monospace;
+  --ff-primary: "Lora", serif;
+  --ff-secondary: "Roboto Slab", serif;
 
-  --fw-reg: 300;
-  --fw-bold: 900;
+  --fw-reg: 400;
+  --fw-bold: 700;
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-accent: #f8333c;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -36,6 +36,11 @@
 }
 
 /* General styles */
+
+/* endable this to add smooth scrolling */
+/* html {
+    scroll-behavior: smooth;
+} */
 
 body {
   background: var(--clr-light);
@@ -191,6 +196,26 @@ header {
   right: 1em;
   top: 1em;
   z-index: 1000;
+}
+
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(0.625turn);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
 }
 
 .hamburger {
@@ -433,6 +458,8 @@ header {
   padding: 0.5em;
 }
 
+/* Individual portfolio item styles */
+
 .portfolio-item-individual {
   padding: 0 2em 2em;
   max-width: 1000px;
@@ -440,7 +467,7 @@ header {
 }
 
 .portfolio-item-individual p {
-  max-width: 800px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
